@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>000-binary | Data & Wifi Kenya</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        body {
+            background: #0a0c15;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        
+        .splash {
+            text-align: center;
+            animation: fadeScale 1.2s ease;
+        }
+        
+        .logo-frame {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 30px;
+            background: rgba(20, 30, 45, 0.8);
+            backdrop-filter: blur(20px);
+            border-radius: 35px;
+            border: 2px solid rgba(79, 172, 254, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 50px rgba(79, 172, 254, 0.3);
+            animation: float 4s infinite ease-in-out;
+        }
+        
+        .logo-frame img {
+            width: 110px;
+            height: 110px;
+            border-radius: 25px;
+            object-fit: cover;
+        }
+        
+        h1 {
+            color: white;
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(79, 172, 254, 0.5);
+            letter-spacing: 4px;
+        }
+        
+        .country {
+            color: #4facfe;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+        }
+        
+        .loader {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 40px 0 20px;
+        }
+        
+        .loader-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #4facfe;
+            animation: pulse 1.4s infinite;
+        }
+        
+        .loader-dot:nth-child(2) {
+            background: #00f2fe;
+            animation-delay: 0.2s;
+        }
+        
+        .loader-dot:nth-child(3) {
+            background: #43e97b;
+            animation-delay: 0.4s;
+        }
+        
+        .copyright {
+            color: rgba(255,255,255,0.5);
+            font-size: 14px;
+            margin-top: 50px;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(0.8); opacity: 0.6; }
+            50% { transform: scale(1.3); opacity: 1; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        @keyframes fadeScale {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="splash">
+        <div class="logo-frame">
+            <img src="https://iili.io/q93YGA7.jpg" alt="000-binary">
+        </div>
+        <h1>DATA & WIFI</h1>
+        <div class="country">KENYA</div>
+        <div class="loader">
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+        </div>
+        <div class="copyright">© 2025-2028 000-binary</div>
+    </div>
+    
+    <script>
+        // 6 second splash screen
+        setTimeout(() => {
+            window.location.href = 'dashboard.html';
+        }, 6000);
+    </script>
+</body>
+</html>
